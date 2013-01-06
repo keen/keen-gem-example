@@ -1,11 +1,11 @@
-# keen-ruby-examples
+# keen-gem-example
 
 This example Sinatra app shows how to use the
 [Keen IO Ruby gem](https://github.com/keenlabs/keen-gem)
 to publish asynchronous events via the Keen IO API.
 
 See it in action at
-[http://keen-ruby-examples.herokuapp.com/](http://keen-ruby-examples.herokuapp.com/).
+[http://keen-gem-example.herokuapp.com/](http://keen-gem-example.herokuapp.com/).
 
 The app lets you compare synchronous and asynchronous response
 times, and vote for your **favorite Star Trek TNG character!**
