@@ -1,5 +1,4 @@
 class App < Sinatra::Base
-  register Sinatra::Reloader if development?
 
   get '/' do
     erb :index
