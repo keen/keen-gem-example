@@ -1,0 +1,13 @@
+<div class="alert alert-success">
+  <p>
+    Published <%= quantity %> <%= quantity == 1 ? "vote" : "votes" %>
+    <%= model %> for
+    <i><%= character %></i> in
+    <b>
+    <%= sprintf("%2d", response_time * 1000) %>ms.
+    </b>
+  </p>
+  <% if model == "asynchronously" %>
+    <p>Click 'refresh' to see asychronous events as they are received.</p>
+  <% end %>
+</div>

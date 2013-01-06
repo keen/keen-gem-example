@@ -1,0 +1,29 @@
+/* top of the page */
+.header-row {
+  margin-bottom: 50px;
+}
+.header-row > div {
+  margin-top: 20px;
+}
+.logo {
+  display: block;
+  margin-top: 10px;
+}
+.header-row .alert {
+  margin-bottom: 0;
+}
+
+.visualizations {
+  text-align: center;
+}
+
+#total-votes {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+#refresh {
+  display: inline-block;
+  float: right;
+}
