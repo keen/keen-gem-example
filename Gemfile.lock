@@ -3,7 +3,7 @@ GEM
   specs:
     addressable (2.3.2)
     cookiejar (0.3.0)
-    daemons (1.1.8)
+    daemon_controller (1.1.1)
     em-http-request (1.0.3)
       addressable (>= 2.2.3)
       cookiejar
@@ -13,21 +13,24 @@ GEM
     em-socksify (0.2.1)
       eventmachine (>= 1.0.0.beta.4)
     eventmachine (1.0.0)
+    fastthread (1.0.7)
     http_parser.rb (0.5.3)
     keen (0.4.1)
       multi_json (~> 1.0)
     multi_json (1.5.0)
+    passenger (3.0.19)
+      daemon_controller (>= 1.0.0)
+      fastthread (>= 1.0.1)
+      rack
+      rake (>= 0.8.1)
     rack (1.4.1)
     rack-protection (1.3.2)
       rack
+    rake (10.0.3)
     sinatra (1.3.3)
       rack (~> 1.3, >= 1.3.6)
       rack-protection (~> 1.2)
       tilt (~> 1.3, >= 1.3.3)
-    thin (1.3.1)
-      daemons (>= 1.0.9)
-      eventmachine (>= 0.12.6)
-      rack (>= 1.0.0)
     tilt (1.3.3)
 
 PLATFORMS
@@ -36,5 +39,5 @@ PLATFORMS
 DEPENDENCIES
   em-http-request
   keen
+  passenger
   sinatra
-  thin

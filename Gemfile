@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'thin'
+gem 'passenger'
 
 gem 'sinatra'
 gem 'em-http-request'
