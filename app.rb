@@ -2,7 +2,17 @@ require File.expand_path("../passenger_em", __FILE__)
 
 class App < Sinatra::Base
 
+  log = File.open("log/sinatra.log", "a")
+  $stdout.reopen(log)
+  $stderr.reopen(log)
+  $stdout.sync = true
+  $stderr.sync = true
+
   PassengerEM.start
+
+  configure do
+    enable :logging, :raise_errors
+  end
 
   get '/' do
     erb :index
@@ -49,5 +59,4 @@ class App < Sinatra::Base
       :character => character,
       :response_time => Time.now.to_f - start_time }
   end
-
 end
