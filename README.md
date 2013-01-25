@@ -1,3 +1,26 @@
+# This is the Passenger branch!
+
+This branch of keen-gem-example shows how to send events asynchronously from Passenger. The example
+can be generalized to any other Ruby application server that does not use EventMachine.
+
+If you want to test the forking code under load, I'd suggest running
+[siege](http://www.joedog.org/siege-home/) against a local Passenger
+instance. Among other scenarios, I use a siege command like this:
+
+    siege -c50 -r50 -d1 -f siege-async-urls
+
+While siege is running, in another terminal window, I restart Passenger:
+
+    touch tmp/restart.txt
+
+I observe the process by running `watch passenger-status` in another terminal window. (Yes, I use tmux :)
+And I also tail the logs with `tail -f log/sinatra.log`.
+
+Restarting Passenger forces new processes to fork and start their EventMachine instance.
+I test to make sure no events are lost during this restart due to the EM reactor not running.
+
+(normal docs below...)
+
 # keen-gem-example
 
 This example Sinatra app shows how to use the
