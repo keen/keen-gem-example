@@ -15,7 +15,7 @@ GEM
     eventmachine (1.0.0)
     fastthread (1.0.7)
     http_parser.rb (0.5.3)
-    keen (0.4.1)
+    keen (0.4.4)
       multi_json (~> 1.0)
     multi_json (1.5.0)
     passenger (3.0.19)
