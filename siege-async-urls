@@ -1,0 +1,1 @@
+http://127.0.0.1:3000/events POST character=Riker&quantity=1&model=asynchronously
