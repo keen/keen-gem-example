@@ -1,6 +1,3 @@
-Keen.configure(this.environment.keenProjectId,
-               this.environment.keenApiKey)
-
 function drawVisualizations() {
   new Keen.Metric("votes", {
     analysisType: "count"
