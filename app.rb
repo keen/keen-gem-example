@@ -1,7 +1,15 @@
+require 'json'
+
 class App < Sinatra::Base
 
   get '/' do
     erb :index
+  end
+
+  # a simple proxy that shows the Keen client querying capability
+  get '/results.json' do
+    content_type :json
+    { :result => Keen.count("votes", :group_by => "character") }.to_json
   end
 
   post '/events' do

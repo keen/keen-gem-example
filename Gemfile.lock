@@ -14,7 +14,8 @@ GEM
       eventmachine (>= 1.0.0.beta.4)
     eventmachine (1.0.0)
     http_parser.rb (0.5.3)
-    keen (0.5.0)
+    json (1.7.6)
+    keen (0.6.0)
       multi_json (~> 1.0)
     multi_json (1.6.1)
     rack (1.4.1)
@@ -35,6 +36,7 @@ PLATFORMS
 
 DEPENDENCIES
   em-http-request
-  keen (~> 0.5.0)
+  json
+  keen (~> 0.6.0)
   sinatra
   thin
