@@ -21,7 +21,8 @@ Clone this repository. cd into the new directory.
 Set the KEEN_API_KEY and KEEN_PROJECT_ID variables in a file called .env in the project root. This file is used by foreman.
 
     KEEN_PROJECT_ID=your-project-id
-    KEEN_API_KEY=your-api-key
+    KEEN_WRITE_KEY=your-write-key
+    KEEN_READ_KEY=your-read-key
 
 Use `foreman start` to start the server.
 
