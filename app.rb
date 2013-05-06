@@ -24,7 +24,7 @@ class App < Sinatra::Base
     end
 
     model = "asynchronously" unless model == "synchronously"
-    character = 'No answer' unless character && character.length > 1
+    character = 'No answer' unless character && character.length > 0
 
     collection = "votes"
     event_properties = { :character => character }
@@ -41,7 +41,8 @@ class App < Sinatra::Base
         begin
           Keen.publish(collection, event_properties)
           puts "Vote for '#{character}' successful."
-        rescue
+        rescue => e
+          puts e
           puts "Vote for '#{character}' failed!"
         end
       end
