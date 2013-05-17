@@ -6,4 +6,4 @@ gem 'thin'
 gem 'sinatra'
 gem 'em-http-request'
 
-gem 'keen', "0.7.2"
+gem 'keen', "0.7.3"
