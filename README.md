@@ -16,7 +16,7 @@ To play with your own copy, follow these steps:
 
 Make sure you have a [Keen IO Account](https://keen.io/). Create a new project and note its Project ID and API key.
 
-Clone this repository. cd into the new directory.
+Clone this repository. cd into the new directory. Run `bundle install` to install dependencies.
 
 Set the KEEN_API_KEY and KEEN_PROJECT_ID variables in a file called .env in the project root. This file is used by foreman.
 
