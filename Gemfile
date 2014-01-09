@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'json'
 gem 'thin'
@@ -6,4 +6,4 @@ gem 'thin'
 gem 'sinatra'
 gem 'em-http-request'
 
-gem 'keen', "0.7.7"
+gem 'keen', :git => "https://github.com/keenlabs/keen-gem.git"
