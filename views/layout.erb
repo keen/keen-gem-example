@@ -66,15 +66,19 @@
               <div class="controls">
                 <label class="radio">
                   <input type="radio" name="model" value="asynchronously" checked>
-                  Asynchronous (non-blocking, fastest)
+                  Asynchronous (non-blocking, one-by-one)
                 </label>
                 <label class="radio">
                   <input type="radio" name="model" value="synchronously">
-                  Synchronous (blocking)
+                  Synchronous (blocking, one-by-one)
                 </label>
                 <label class="radio">
                   <input type="radio" name="model" value="synchronously as a batch">
-                  Synchronous, in 1 batch (blocking)
+                  Synchronous, in 1 batch (blocking, single call)
+                </label>
+                <label class="radio">
+                  <input type="radio" name="model" value="asynchronously as a batch">
+                  Asynchronous, in 1 batch (non-blocking, single call)
                 </label>
               </div>
             </div>

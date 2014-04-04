@@ -28,19 +28,25 @@ class App < Sinatra::Base
     collection = "votes"
     event_properties = { :character => character }
 
-    if model == "synchronously as a batch"
-        votes = []
-        quantity.times do
-          votes << event_properties
-        end
+    if model =~ /batch/
+      votes = []
+      quantity.times do
+        votes << event_properties
+      end
 
-        begin
+      begin
+        if model == "asynchronously as a batch"
+          Keen.publish_batch_async(:votes => votes).callback {
+            puts "#{quantity} votes for '#{character}' successful."
+          }
+        else
           Keen.publish_batch(:votes => votes)
           puts "#{quantity} votes for '#{character}' successful."
-        rescue => e
-          puts e
-          puts "#{quantity} votes for '#{character}' failed!"
         end
+      rescue => e
+        puts e
+        puts "#{quantity} votes for '#{character}' failed!"
+      end
     else
       quantity.times do
         if model == "asynchronously"

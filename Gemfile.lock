@@ -1,10 +1,10 @@
 GIT
   remote: https://github.com/keenlabs/keen-gem.git
-  revision: e4be0511a87caa4fb86d32a662dc22d85a45e274
+  revision: edb87a412ccfeca54b5530c8109562712fdd7fab
   specs:
-    keen (0.8.0)
+    keen (0.8.1)
       addressable (~> 2.3.5)
-      multi_json (~> 1.0)
+      multi_json (~> 1.3)
 
 GEM
   remote: https://rubygems.org/
@@ -23,7 +23,7 @@ GEM
     eventmachine (1.0.3)
     http_parser.rb (0.6.0)
     json (1.8.1)
-    multi_json (1.8.3)
+    multi_json (1.9.2)
     rack (1.5.2)
     rack-protection (1.5.1)
       rack
