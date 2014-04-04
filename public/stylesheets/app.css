@@ -28,3 +28,8 @@
   display: inline-block;
   float: right;
 }
+
+.control-group {
+  margin-top: 0px !important;
+  padding-top: 20px;
+}
