@@ -12,6 +12,10 @@ class App < Sinatra::Base
     { :result => Keen.count("votes", :group_by => "character") }.to_json
   end
 
+  get '/events' do
+    redirect "/"
+  end
+
   post '/events' do
     start_time = Time.now.to_f
 
