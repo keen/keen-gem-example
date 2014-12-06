@@ -12,6 +12,7 @@ GEM
     addressable (2.3.6)
     cookiejar (0.3.0)
     daemons (1.1.9)
+    dotenv (1.0.2)
     em-http-request (1.1.2)
       addressable (>= 2.3.4)
       cookiejar
@@ -21,6 +22,9 @@ GEM
     em-socksify (0.3.0)
       eventmachine (>= 1.0.0.beta.4)
     eventmachine (1.0.3)
+    foreman (0.76.0)
+      dotenv (~> 1.0.2)
+      thor (~> 0.19.1)
     http_parser.rb (0.6.0)
     json (1.8.1)
     multi_json (1.10.0)
@@ -35,6 +39,7 @@ GEM
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
       rack (>= 1.0.0)
+    thor (0.19.1)
     tilt (1.4.1)
 
 PLATFORMS
@@ -42,6 +47,7 @@ PLATFORMS
 
 DEPENDENCIES
   em-http-request
+  foreman (~> 0.76.0)
   json
   keen!
   sinatra
